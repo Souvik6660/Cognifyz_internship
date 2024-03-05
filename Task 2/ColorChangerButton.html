@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Madimi+One&display=swap');
+   *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+   }
+
+   html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+
+   }
+
+.box{
+   
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+  align-items: center;
+position: relative;
+
+
+}
+
+.bt{
+     position: relative;
+     width: 20vw;
+     height: 10vh;
+   font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+font-size: 1.8vw;
+padding-top: 2px;
+border-radius: 1.55vw;
+
+} 
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button class="bt">Click Me To Change The Color</button>
+    </div>
+    <script>
+ let var1= document.querySelector(".bt");
+   var1.addEventListener("click",changeme);
+    let t=0;
+    function changeme(){
+       
+        if(t==0){
+            var1.style.background="#B83227";
+           var1.style.color="white";
+           t=1;
+        }
+        else if(t==1){
+            var1.style.background="white";
+            var1.style.color="black";
+
+            t=0;
+        }
+
+
+  }
+</script>
+</body>
+</html>
